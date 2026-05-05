@@ -79,7 +79,7 @@ export class HeroesService {
 
   getHeroSummary() {
     const heroes = this.heroes;
-    const totalHeroes = heroes.length;
+    const totalCharacters = heroes.length;
     const strongestHero = heroes.reduce((max, hero) =>
       hero.strength > max.strength ? hero : max,
     );
@@ -104,7 +104,7 @@ export class HeroesService {
     }, 0);
 
     return {
-      totalHeroes,
+      totalCharacters,
       strongestHero,
       smartestHero,
       heroCount,
